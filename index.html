@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">Fountain</div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Instructors</a>
+        <a href="#">Schedules</a>
+        <a href="#">Contact Us</a>
+      </nav>
+      <div class="Searching"><i class="fa-solid fa-magnifying-glass"></i></div>
+
+      <div class="auth-buttons">
+        <button class="login-btn">Login</button>
+        <button class="register-btn">Register</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>A Classical Education for the Future</h1>
+    <p>We prepare you to engage in the world that is and to help bring about a world that ought to be</p>
+    <button class="get-started">Get Started</button>
+  </div>
+
+  <section class="features">
+    <div class="feature-item">
+      <div class="icon"><i class="fa-regular fa-comments"></i></div>
+      <div class="text">Live chat</div>
+    </div>
+    <div class="feature-item">
+      <div class="icon"><i class="fa-solid fa-chalkboard"></i></div>
+      <div class="text">Examination</div>
+    </div>
+    <div class="feature-item">
+      <div class="icon"><i class="fa-solid fa-award"></i></div>
+      <div class="text">Competition</div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="categories-header">
+      <h2>Top Categories</h2>
+      <a href="#" class="see-all">See all</a>
+    </div>
+    <div class="categories-wrapper">
+      <button class="scroll-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="categories-grid">
+        <button class="category-card">
+          <img src="/picture/marketing.png" alt="Marketing">
+          <h3>Marketing</h3>
+        </button>
+        <button class="category-card">
+          <img src="/picture/design.png" alt="Design">
+          <h3>Design</h3>
+        </button>
+        <button class="category-card">
+          <img src="/picture/programing.png" alt="Programming">
+          <h3>Programming</h3>
+        </button>
+        <button class="category-card">
+          <img src="/picture/teachlogog.png" alt="Technology">
+          <h3>Technology</h3>
+        </button>
+      </div>
+      <button class="scroll-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <button class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+    window.onscroll = function () {
+      var scrollToTopBtn = document.querySelector('.scroll-to-top');
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    };
+
+    document.querySelector('.scroll-to-top').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.querySelector('.scroll-btn.left').addEventListener('click', function () {
+      document.querySelector('.categories-grid').scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    document.querySelector('.scroll-btn.right').addEventListener('click', function () {
+      document.querySelector('.categories-grid').scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+
+</html>
